@@ -5,6 +5,7 @@ import { BrowserRouter, Routes } from 'react-router-dom'
 import IndexRoutes from './routes/index.routes'
 import { HelmetProvider } from 'react-helmet-async'
 import useApp from './context/app'
+import GlobalStyle from './globalStyles'
 
 function App() {
   const { pageTitle } = useApp();
@@ -12,9 +13,10 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title> {pageTitle} | FeedVote </title>
+        <title> {pageTitle} | Prevet </title>
       </Helmet>
       <BrowserRouter>
+        <GlobalStyle />
         <IndexRoutes />
       </BrowserRouter>
     </HelmetProvider>

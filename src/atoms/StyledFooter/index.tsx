@@ -1,0 +1,1 @@
+export { FooterSection, ContactStyles, QuicklinksStyles, AboutStyles } from "./index.styled";

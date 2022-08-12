@@ -7,14 +7,13 @@ import persistStore from 'redux-persist/es/persistStore'
 import App from './App'
 import ErrorBoundary from './components/ErrorBoundary'
 import { AppContextProvider } from './context/app'
-import './index.css'
 import store from './store'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const persistor = persistStore(store)
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ErrorBoundary>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
@@ -24,5 +23,5 @@ root.render(
         </PersistGate>
       </Provider>
     </ErrorBoundary>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 );
