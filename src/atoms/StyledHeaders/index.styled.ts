@@ -7,7 +7,10 @@ export const StyledHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #FDF1F3;
-
+  position: relative;
+  &.open {
+    opacity: 0.3;
+ }
   .logo-group{
     display: flex;
     justify-content: center;
@@ -49,6 +52,18 @@ export const StyledHeader = styled.div`
     }
   }
 
+  .menu-group{
+    position: absolute;
+    img{
+      width: 35px;
+      cursor: pointer;
+      display: none;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+
   @media (max-width:1200px){
     .logo-group{
       img{
@@ -61,9 +76,43 @@ export const StyledHeader = styled.div`
     }
   }
   @media (max-width:990px){
-
+    .logo-group{
+      img{
+        width: 80px;
+      }
+    }
     .header-links{
       width:82%;
+      .navigation-group{
+        a{
+          font-size: .75rem;
+          white-space: nowrap;
+          margin: 0 .3rem;
+        }
+      }
+    }
+    div{
+      a{
+        padding: .3rem 1rem;
+        font-size: .7rem;
+        margin: .5rem .5rem 0 .5rem;
+      }
+    }
+  }
+  @media (max-width:768px){
+    .header-links{
+      display: none;
+    }
+    .menu-group{
+      position: relative;
+      img{
+        cursor: pointer;
+        display: flex;
+      }
+    }
+  }
+  @media (max-width:420px){
+    padding: 1.5rem 2rem;
     }
   }
 

@@ -7,9 +7,9 @@ import star from "../assets/SVG/star.svg"
 
 
 
-function EarnSub() {
+function EarnSub(props: any) {
   return (
-    <EarnSubSection>
+    <EarnSubSection className={props.className}>
         <div className="earn-right">
             <h2>What you need to earn</h2>
             <div className="earn-highlights">

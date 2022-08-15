@@ -4,10 +4,10 @@ import { FAQCard, FAQLink, FAQSection } from '../atoms/StyledLandingPage'
 
 
 
-function FAQ() {
+function FAQ(props: any) {
 
   return (
-    <FAQSection>
+    <FAQSection className={props.className}>
         <h2 className='faq-title'>Have a question, check FAQs</h2>
         <FAQCard>
             <FAQsub  question='How do i make a vetting request for a car i want to buy?' response='The vetting process normally takes place within 24hours of make the vetting request, but might as well be more than that due to one reason or the other e.g inablity to locate the vehicle to be vet ontime whiich may be due to misinformation from the client.'/>

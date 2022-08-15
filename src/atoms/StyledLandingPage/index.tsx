@@ -10,5 +10,6 @@ export {
        FAQLink,
        FAQSection,
        FAQGroup,
-       InfoSection
+       InfoSection,
+       ModalContactStyles
     } from './index.styled'

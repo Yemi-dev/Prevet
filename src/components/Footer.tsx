@@ -6,9 +6,9 @@ import { FooterSection } from '../atoms/StyledFooter'
 
 
 
-function Footer() {
+function Footer(props: any) {
   return (
-    <FooterSection>
+    <FooterSection className={props.className}>
       <About />
       <Quicklinks />
       <Contact />

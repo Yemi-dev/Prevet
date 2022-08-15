@@ -4,9 +4,9 @@ import { StyledButtonLinks } from '../atoms/StyledButtons'
 import { EarnSection } from '../atoms/StyledLandingPage'
 
 
-function Earn() {
+function Earn(props: any) {
   return (
-    <EarnSection>
+    <EarnSection className={props.className}>
         <div className="earn-banner"></div>
         <div className="earn-right">
             <h2>Earn with Us</h2>

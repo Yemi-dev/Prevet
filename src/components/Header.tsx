@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link, NavLink} from 'react-router-dom'
 import logo from "../assets/SVG/logo.svg"
+import menu from "../assets/SVG/menu.svg"
 import { StyledButtonLinks } from '../atoms/StyledButtons'
 import { StyledHeader } from '../atoms/StyledHeaders'
 
-function Header() {
+function Header(props: any) {
 
   return (
-      <StyledHeader>
+      <StyledHeader className={props.className}>
         <div className='logo-group'>
           <img src={logo} alt="logo" />
         </div>
@@ -23,7 +24,9 @@ function Header() {
           <NavLink to="/Contact us">Contact Us</NavLink>
         </div>
         </div>
-        
+        <div className="menu-group">
+            <img src={menu} alt="icon" onClick={props.onClick}/>
+        </div>
       </StyledHeader>
   )
 }

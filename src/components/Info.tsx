@@ -7,9 +7,9 @@ import twitter from '../assets/SVG/twitter.svg'
 import linkedin from '../assets/SVG/linkedin.svg'
 import { InfoSection } from '../atoms/StyledLandingPage'
 
-function Info() {
+function Info(props: any) {
   return (
-   <InfoSection>
+   <InfoSection className={props.className}>
     <h2>Reach Out To Us On</h2>
     <p>Raach out to us on our social media platforms </p>
     <div className="socials-icons">

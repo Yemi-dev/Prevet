@@ -6,9 +6,9 @@ import { HeroSection, HeroBannerBackground } from '../atoms/StyledLandingPage'
 
 
 
-function Hero() {
+function Hero(props: any) {
   return (
-    <HeroSection>
+    <HeroSection className={props.className}>
         <div className='before'>
         <div className='hl-group'>
             <div className='hl-sub-group'>

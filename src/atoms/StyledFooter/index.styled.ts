@@ -4,8 +4,12 @@ export const FooterSection = styled.div`
   background-color: #141520;
   padding: 8rem 4rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 420px){
+    padding:6rem 2rem;
+  }
 `
 
  export const ContactStyles = styled.div`
@@ -75,10 +79,40 @@ width: 30%;
             padding: .3rem 1rem;
         }
     }
+
+    @media (max-width: 768px){
+        width: 70%;
+    }
+    @media (max-width: 420px){
+        width: 100%;
+        .contact-response{
+            font-size: .6rem;
+        }
+        .contact-form{
+            p{
+                font-size: .6rem;
+            }
+            .input-group{
+                input{
+                    font-size: .6rem;
+                }
+            }
+            .textarea-group{
+                textarea{
+                    font-size: .6rem;
+                }
+            }
+            button{
+                font-size: .6rem;
+            }
+        }
+        
+    }
     `
 
  export const QuicklinksStyles = styled.div`
 width: 30%;
+margin-bottom: 3rem;
     h5{
         padding: .3rem 0;
         color: white;
@@ -105,10 +139,22 @@ width: 30%;
         }
         
     }
+    @media (max-width: 768px){
+        width: 30%;
+    }
+    @media (max-width: 420px){
+        width: 100%;
+        .footer-links{
+            a{
+                font-size: .6rem;
+            }
+        }
+    }
 `
 
 export const AboutStyles = styled.div`
     width: 40%;
+    margin-bottom: 3rem;
     h5{
         padding: .3rem 0;
         color: white;
@@ -125,5 +171,18 @@ export const AboutStyles = styled.div`
         font-size: .8rem;
         margin: 2rem 0;
         width: 60%;
+    }
+    @media (max-width: 768px){
+        width: 70%;
+        .about-texts{
+            width: 80%;
+        }
+    }
+    @media (max-width: 420px){
+        width: 100%;
+        .about-texts{
+            width: 100%;
+            font-size: .6rem;
+        }
     }
 `

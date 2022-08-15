@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Home from "../pages/Home"
 
 const Container = styled.div`
-  background-color: #FDF1F3;
+  background-color: white;
 `
 
 const IndexRoutes = () => {
