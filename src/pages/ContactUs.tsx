@@ -1,5 +1,5 @@
 import React from 'react'
-import { RCStyles } from './RequestCall'
+import { RCStyles } from '../atoms/StyledLandingPage'
 import * as Yup from 'yup'
 import { InputGroup } from 'react-bootstrap'
 import { Card } from '../atoms/StyledLandingPage'

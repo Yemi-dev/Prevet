@@ -10,10 +10,10 @@ function Quicklinks() {
         <div className="border-highlight"></div>
         <div className="footer-links">
             <Link to='/'>Home</Link>
-            <Link to='/'>Requests</Link>
-            <Link to='/'>Call Us</Link>
+            <Link to='/Request'>Requests</Link>
+            <Link to='/Call'>Call Us</Link>
             <Link to='/'>Notifications</Link>
-            <Link to='/'>FAQs</Link>
+            <Link to='/Faq'>FAQs</Link>
             <Link to='/'>Privacy Policy</Link>
             <Link to='/'>Terms & Conditions</Link>
         </div>

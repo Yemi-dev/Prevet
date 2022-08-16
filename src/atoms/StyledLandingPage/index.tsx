@@ -11,5 +11,7 @@ export {
        FAQSection,
        FAQGroup,
        InfoSection,
-       ModalContactStyles
+       ModalContactStyles,
+       PRStyles,
+       RCStyles,
     } from './index.styled'

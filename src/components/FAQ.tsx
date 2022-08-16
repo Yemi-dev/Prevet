@@ -19,7 +19,7 @@ function FAQ(props: any) {
         </FAQCard>
         <FAQLink>
             <p> Can’t find what you want? </p>
-            <Link to='/'>Contact us</Link>
+            <Link to='/Contact-us'>Contact us</Link>
         </FAQLink>
 
     </FAQSection>

@@ -760,3 +760,213 @@ margin: 1rem auto;
         
     }
     `
+
+export const PRStyles = styled.div`
+background-color: #FDF1F3;
+padding: 3rem 2rem; 
+.PR-card{
+  width: 70%;
+  padding: 0 3rem;
+  background-color: white;
+  border: none;
+  h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem auto;
+  }
+  form{
+    width: 100%;
+    .btn-group{
+      width: 100%;
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .input-group{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem 0;
+      .errorText{
+        color: red;
+        font-size: .5rem;
+      }
+      input, textarea{
+       background-color:  #EFF2F9;
+       padding: .5rem;
+       margin-top: .5rem;
+       border-radius: 5px;
+       &.error{
+        border: 1px solid red;
+       }
+       &::placeholder{
+        font-size: .7rem;
+     }
+      }
+    }
+    .mini-input-group{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px 0px; 
+      .input-group{
+        width: 48%;
+        input{
+          border-radius: 5px;
+          &.error{
+            border: 1px solid red;
+           }
+           &::placeholder{
+            font-size: .7rem;
+         }
+        }
+      }
+    }
+  }
+ 
+}
+@media (max-width:990px){
+  .PR-card{
+    width: 80%;
+    padding: 1rem;
+  }
+}
+@media (max-width:768px){
+  .PR-card{
+    width: 80%;
+    form{
+      .mini-input-group{
+        flex-direction: column;
+        .input-group{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width:560px){
+  .PR-card{
+    width: 100%;
+    h2{
+      font-size: 1.5rem;
+    }
+    form{
+      .btn-group{
+        button{
+          font-size: .7rem;
+        }
+      }
+      .mini-input-group{
+        flex-direction: column;
+        .input-group{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+`
+export const RCStyles = styled.div`
+  background-color: #FDF1F3;
+  padding: 3rem 2rem; 
+  .PR-card{
+    width: 70%;
+    padding: 0 3rem;
+    background-color: white;
+    border: none;
+    h2{
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 1rem auto;
+    }
+    form{
+      width: 100%;
+      .btn-group{
+        width: 100%;
+        text-align: center;
+        margin: 2rem auto;
+      }
+      .input-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
+        .errorText{
+          color: red;
+          font-size: .5rem;
+        }
+        input, textarea{
+         background-color:  #EFF2F9;
+         padding: .5rem;
+         margin-top: .5rem;
+         border-radius: 5px;
+         &.error{
+          border: 1px solid red;
+         }
+         &::placeholder{
+            font-size: .7rem;
+         }
+        }
+      }
+      .mini-input-group{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px 0px; 
+        .input-group{
+          width: 48%;
+          input{
+            border-radius: 5px;
+            &.error{
+              border: 1px solid red;
+             }
+             &::placeholder{
+                font-size: .7rem;
+             }
+          }
+        }
+      }
+    }
+   
+  }
+  @media (max-width:990px){
+    .PR-card{
+      width: 80%;
+      padding: 1rem;
+    }
+  }
+  @media (max-width:768px){
+    .PR-card{
+      width: 80%;
+      form{
+        .mini-input-group{
+          flex-direction: column;
+          .input-group{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width:560px){
+    .PR-card{
+      width: 100%;
+      h2{
+        font-size: 1.5rem;
+      }
+      form{
+        .btn-group{
+          button{
+            font-size: .7rem;
+          }
+        }
+        .mini-input-group{
+          flex-direction: column;
+          .input-group{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+`
