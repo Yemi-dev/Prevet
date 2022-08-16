@@ -1,8 +1,8 @@
 import React from 'react'
 import * as Yup from 'yup'
+import { useToast } from '@chakra-ui/react'
 import { InputGroup } from 'react-bootstrap'
 import { Card } from '../atoms/StyledLandingPage'
-import styled from 'styled-components'
 import { useFormik } from 'formik'
 import { PRStyles } from '../atoms/StyledLandingPage'
 import { StyledButton } from '../atoms/StyledButtons'
@@ -10,7 +10,7 @@ import { StyledButton } from '../atoms/StyledButtons'
 function PostRequest() {
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const fullNameRegex = /^[a-z ,.'-]+$/i
-
+  const toast = useToast();
   const formik = useFormik({
     initialValues: {
       fullname: '',
@@ -47,7 +47,8 @@ function PostRequest() {
               .label('Car Specificity')
               .required(),
       carLink: Yup.string()
-              .url(),
+              .url()
+              .label('Link to car'),
       brandPhone: Yup.string()
               .matches(phoneRegExp, 'Phone number is not valid')
               .label('Phone Number')
@@ -69,6 +70,13 @@ function PostRequest() {
        Vet Address: ${values.vetAddress}
        Image: ${values.image}
        `);
+       toast({
+        title: 'Request Submitted.',
+        description: "Your request will be processed.",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
        resetForm();
     }
   })

@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Yup from 'yup'
+import { useToast } from '@chakra-ui/react'
 import { InputGroup } from 'react-bootstrap'
 import { Card } from '../atoms/StyledLandingPage'
 import styled from 'styled-components'
@@ -11,7 +12,7 @@ import { RCStyles } from '../atoms/StyledLandingPage'
 function RequestCall() {
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
     const fullNameRegex = /^[a-z ,.'-]+$/i
-  
+    const toast = useToast();
     const formik = useFormik({
       initialValues: {
         fullname: '',
@@ -48,6 +49,13 @@ function RequestCall() {
          RequestTitle: ${values.requestTitle}
          Description: ${values.description}
          `);
+         toast({
+            title: 'Request Submitted.',
+            description: "Your request will be processed.",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+          })
          resetForm();
       }
     })
