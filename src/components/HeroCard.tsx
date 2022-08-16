@@ -18,10 +18,10 @@ function HeroCard() {
             <p>Post a request by providing all necessary information about the car you want to vet and it’s location or link.</p>
             <div className='hc-links'>
             <StyledButtonLinks variant='primary' size='sm'>
-              <Link to="/">Post Now</Link>
+              <Link to="/Post">Post Now</Link>
             </StyledButtonLinks>
             <StyledButtonLinks size='sm' >
-              <Link to="/"> Call Now</Link>
+              <Link to="/Call"> Call Now</Link>
             </StyledButtonLinks>
             </div>
         </Card>
@@ -31,10 +31,10 @@ function HeroCard() {
             <p>Post a request by providing all necessary information about the car you want to vet and it’s location or link.</p>
             <div className='hc-links'>
             <StyledButtonLinks variant='primary' size='sm'>
-              <Link to="/">Call Now</Link>
+              <Link to="/Call">Call Now</Link>
             </StyledButtonLinks>
             <StyledButtonLinks size='sm' >
-              <Link to="/"> Post Now</Link>
+              <Link to="/Post"> Post Now</Link>
             </StyledButtonLinks>
             </div>
         </Card>
@@ -44,10 +44,10 @@ function HeroCard() {
             <p>Post a request by providing all necessary information about the car you want to vet and it’s location or link.</p>
             <div className='hc-links'>
             <StyledButtonLinks variant='primary' size='sm'>
-              <Link to="/">Call Now</Link>
+              <Link to="/Call">Call Now</Link>
             </StyledButtonLinks>
             <StyledButtonLinks size='sm'>
-              <Link to="/"> Request</Link>
+              <Link to="/Request"> Request</Link>
             </StyledButtonLinks>
             </div>
         </Card>

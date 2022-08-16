@@ -34,7 +34,7 @@ function EarnSub(props: any) {
             </div>
             
             <StyledButtonLinks>
-                <Link to="/"> Get Started</Link>
+                <Link to="/Post"> Get Started</Link>
             </StyledButtonLinks>
         </div>
         <div className="earn-banner"></div>

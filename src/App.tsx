@@ -1,13 +1,20 @@
+import {  ChakraProvider,
+  extendTheme } from '@chakra-ui/react'
 import store from './store'
 import persistStore from 'redux-persist/es/persistStore'
 import { Helmet } from 'react-helmet'
-import { BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import IndexRoutes from './routes/index.routes'
 import { HelmetProvider } from 'react-helmet-async'
 import useApp from './context/app'
 import GlobalStyle from './globalStyles'
-import {  ChakraProvider,
-  extendTheme } from '@chakra-ui/react'
+import Home from './components/Home'
+import PostRequest from './pages/PostRequest'
+import CallUs from './pages/CallUs'
+import ContactUs from './pages/ContactUs'
+import Faqs from './pages/Faqs'
+import LandingPage from './pages/LandingPage'
+import RequestCall from './pages/RequestCall'
 
 function App() {
   const { pageTitle } = useApp();
@@ -31,9 +38,34 @@ function App() {
       <Helmet>
         <title> {pageTitle} | Prevet </title>
       </Helmet>
-      <BrowserRouter>
         <GlobalStyle />
-        <IndexRoutes />
+        <BrowserRouter>
+        <Routes>
+          <Route
+          path='/'
+          element={ <IndexRoutes>
+            <LandingPage />
+          </IndexRoutes>}>
+            <Route
+            path='/'
+            element={<Home />}></Route>
+            <Route
+            path='/Post'
+            element={<PostRequest />}></Route>
+            <Route
+            path='/Request'
+            element={<RequestCall />}></Route>
+            <Route
+            path='/Call'
+            element={<CallUs />}></Route>
+            <Route
+            path='/Contact-us'
+            element={<ContactUs />}></Route>
+            <Route
+            path='/Faq'
+            element={<Faqs />}></Route>
+          </Route>
+        </Routes>
       </BrowserRouter>
     </HelmetProvider>
     </ChakraProvider>

@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { Children } from 'react'
 import styled from 'styled-components'
-import Home from "../pages/Home"
+import LandingPage from "../pages/LandingPage"
 
 const Container = styled.div`
   background-color: white;
 `
 
-const IndexRoutes = () => {
+const IndexRoutes = (props: any) => {
   return (
     <Container>
-      <Home />
+      {props.children}
     </Container>
   )
 }

@@ -88,14 +88,14 @@ function Mobileheader(props: any) {
      </div>
       <div className='mobile-header-links'>
         <div className='navigation-group'>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/Request"> Request Call </NavLink>
-          <NavLink to="/Call"> Call Us</NavLink>
-          <NavLink to="/Faq">FAQs</NavLink>
-          <NavLink to="/Contact us">Contact Us</NavLink>
+          <NavLink to="/" onClick={props.onClick}>Home</NavLink>
+          <NavLink to="/Request" onClick={props.onClick}> Request Call </NavLink>
+          <NavLink to="/Call" onClick={props.onClick}> Call Us</NavLink>
+          <NavLink to="/Faq" onClick={props.onClick}>FAQs</NavLink>
+          <NavLink to="/Contact-us" onClick={props.onClick}>Contact Us</NavLink>
         </div>
         <StyledButtonLinks>
-          <Link to="/">Post a Request</Link>
+          <Link to="/Post" onClick={props.onClick}>Post a Request</Link>
         </StyledButtonLinks>
       </div>
   </MHStyles>

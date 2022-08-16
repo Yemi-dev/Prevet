@@ -16,10 +16,10 @@ function Hero(props: any) {
             <p>Need a professional to check the engine record of any car for 5,000?</p>
             <div className='hl-links'>
             <StyledButtonLinks>
-              <Link to="/">Post a Request</Link>
+              <Link to="/Post">Post a Request</Link>
             </StyledButtonLinks>
             <StyledButtonLinks variant='primary'>
-              <Link to="/"> Request a call</Link>
+              <Link to="/Request"> Request a call</Link>
             </StyledButtonLinks>
             </div>
             </div>

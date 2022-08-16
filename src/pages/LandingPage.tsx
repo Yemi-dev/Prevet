@@ -1,18 +1,15 @@
 import React, {useEffect, useState} from 'react'
+import { Outlet } from 'react-router-dom'
 import { useDisclosure, ModalOverlay } from '@chakra-ui/react'
 import styled from 'styled-components'
 import Header from "../components/Header"
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
-import Earn from '../components/Earn'
-import EarnSub from '../components/EarnSub'
-import FAQ from '../components/FAQ'
 import Info from '../components/Info'
 import Mobileheader from '../components/Mobileheader'
 import LandingModal from '../components/LandingModal'
 
 
-const Container = styled.div`
+ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   max-width: 1400px;
@@ -27,7 +24,8 @@ const OverlayOne = () => (
   />
 )
 
-function Home() {
+
+function LandingPage() {
 
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
@@ -54,10 +52,7 @@ function Home() {
     <LandingModal onClick={onClose} isOpen={isOpen} overlay={overlay}/>
        <Mobileheader  showMenu={showMenu} onClick={closeMenu} />
        <Header onClick={openMenu} className={showMenu ? 'open' : ''}/>
-       <Hero className={showMenu ? 'open' : ''} />
-       <Earn className={showMenu ? 'open' : ''} />
-       <EarnSub className={showMenu ? 'open' : ''}/>
-       <FAQ className={showMenu ? 'open' : ''} />
+       <Outlet />
        <Info className={showMenu ? 'open' : ''} />
        <Footer className={showMenu ? 'open' : ''}/>
    </Container>
@@ -65,4 +60,4 @@ function Home() {
   )
 }
 
-export default Home
+export default LandingPage
