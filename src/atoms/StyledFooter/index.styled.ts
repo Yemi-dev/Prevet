@@ -7,6 +7,9 @@ export const FooterSection = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  &.open{
+    opacity: 0.3;
+}
   @media (max-width: 420px){
     padding:6rem 2rem;
   }

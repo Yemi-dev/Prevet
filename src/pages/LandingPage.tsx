@@ -52,7 +52,7 @@ function LandingPage() {
     <LandingModal onClick={onClose} isOpen={isOpen} overlay={overlay}/>
        <Mobileheader  showMenu={showMenu} onClick={closeMenu} />
        <Header onClick={openMenu} className={showMenu ? 'open' : ''}/>
-       <Outlet />
+       <Outlet context={showMenu}/>
        <Info className={showMenu ? 'open' : ''} />
        <Footer className={showMenu ? 'open' : ''}/>
    </Container>

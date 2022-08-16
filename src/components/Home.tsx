@@ -3,18 +3,16 @@ import Earn from './Earn'
 import EarnSub from './EarnSub'
 import FAQ from './FAQ'
 import Hero from './Hero'
+import { useOutletContext } from 'react-router-dom'
 
-interface OutletProps {
-    className?: string;
-  }
-
-function Home(props: OutletProps) {
+function Home() {
+    const showMenu = useOutletContext()
   return (
     <>
-    <Hero className={props.className}/>
-    <Earn className={props.className} />
-    <EarnSub className={props.className}/>
-    <FAQ className={props.className}/>
+    <Hero className={showMenu ? 'open' : ''}/>
+    <Earn className={showMenu ? 'open' : ''} />
+    <EarnSub className={showMenu ? 'open' : ''}/>
+    <FAQ className={showMenu ? 'open' : ''}/>
     </>
   )
 }

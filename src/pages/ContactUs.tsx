@@ -4,11 +4,12 @@ import * as Yup from 'yup'
 import { useToast } from '@chakra-ui/react'
 import { InputGroup } from 'react-bootstrap'
 import { Card } from '../atoms/StyledLandingPage'
-import styled from 'styled-components'
 import { useFormik } from 'formik'
 import { StyledButton } from '../atoms/StyledButtons'
+import { useOutletContext } from 'react-router-dom'
 
 function ContactUs() {
+    const showMenu = useOutletContext()
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
     const fullNameRegex = /^[a-z ,.'-]+$/i
     const toast = useToast();
@@ -55,7 +56,7 @@ function ContactUs() {
     })
 
   return (
-    <RCStyles>
+    <RCStyles className={showMenu ? 'open' : ''}>
     <Card className='PR-card'>
     <h2>Contact Us</h2>
     <form onSubmit={formik.handleSubmit}>

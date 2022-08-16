@@ -9,7 +9,7 @@ const MHStyles = styled.div`
   display: none;
   position: absolute;
   transform: translateX(1000px);
-  transition: all 500ms ease-in-out;
+  transition: all 150ms ease-in-out;
   &.open{
     transform:translateX(0px);
     background-color: #FDE5E9;

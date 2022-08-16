@@ -764,6 +764,9 @@ margin: 1rem auto;
 export const PRStyles = styled.div`
 background-color: #FDF1F3;
 padding: 3rem 2rem; 
+&.open{
+    opacity: 0.3;
+}
 .PR-card{
   width: 70%;
   padding: 0 3rem;
@@ -868,6 +871,9 @@ padding: 3rem 2rem;
 export const RCStyles = styled.div`
   background-color: #FDF1F3;
   padding: 3rem 2rem; 
+  &.open{
+    opacity: 0.3;
+}
   .PR-card{
     width: 70%;
     padding: 0 3rem;
@@ -969,4 +975,84 @@ export const RCStyles = styled.div`
     }
   }
 
+`
+
+export const CallSection = styled.div`
+     width: 100%;
+     padding: 2rem;
+     background-color: #FDF1F3;
+     &.open{
+        opacity: 0.3;
+     }
+     .call-card{
+        padding: 2rem 0;
+        width: 70%;
+        background-color: white;
+        border: none;
+        .contact-group, .contact-sub-group{
+            display: flex;
+            align-items: center;
+        }
+        .contact-group{
+            width: 60%;
+            margin: 2rem auto;
+            justify-content: space-between;
+            .contact-sub-group{
+                justify-content: start;
+                p{
+                    color: black;
+                }
+            }
+        }
+        
+        img{
+            width: 50px;
+            margin-right: 1rem;
+        }
+     }
+     @media (max-width: 990px){
+        .call-card{
+            .contact-group{
+                width: 90%;
+            }
+        }
+     }
+     @media (max-width: 768px){
+        .call-card{
+            .contact-group{
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+     }
+     @media (max-width: 560px){
+        .call-card{
+            width: 100%;
+            img{
+                width: 30px;
+            }
+        }
+        div{
+            .contact-link{
+                font-size: .7rem;
+                padding: .5rem 1.5rem;
+            }
+        }
+     }
+`
+export const FaqStyles = styled.div`
+    &.open{
+        opacity: 0.3;
+    }
+     .Faq-group{
+        padding: 2rem 4rem;
+        .faq-title{
+            font-weight: 600;
+        }
+     }
+     @media (max-width: 420px){
+        .Faq-group{
+            padding: 2rem;
+        }
+     }
 `

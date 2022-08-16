@@ -14,4 +14,6 @@ export {
        ModalContactStyles,
        PRStyles,
        RCStyles,
+       CallSection,
+       FaqStyles
     } from './index.styled'

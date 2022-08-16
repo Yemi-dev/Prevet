@@ -1,19 +1,14 @@
 import React from 'react'
 import FAQ from '../components/FAQ'
-import styled from 'styled-components'
+import { FaqStyles } from '../atoms/StyledLandingPage'
+import { useOutletContext } from 'react-router-dom'
 
-export const FaqStyles = styled.div`
-     .Faq-group{
-        padding: 2rem 4rem;
-        .faq-title{
-            font-weight: 600;
-        }
-     }
-`
+
 
 function Faqs() {
+    const showMenu = useOutletContext()
   return (
-    <FaqStyles>
+    <FaqStyles className={showMenu ? 'open' : ''} >
         <FAQ className='Faq-group'/>
     </FaqStyles>
   )
