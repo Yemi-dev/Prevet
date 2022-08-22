@@ -22,7 +22,7 @@ function Contact() {
         setisSubmitted(true)
         setTimeout(()=>{
             setResponse('')
-        }, 3000)
+        }, 7000)
         setResponse('Your message has been sent')
     }
     const handleChange = (e: Event) => {

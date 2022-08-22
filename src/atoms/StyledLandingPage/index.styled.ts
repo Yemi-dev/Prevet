@@ -789,6 +789,25 @@ padding: 3rem 2rem;
       flex-direction: column;
       width: 100%;
       margin: 1rem 0;
+      label{
+        .img-picker{
+            display: flex;
+            justify-content: center;
+            background-color:  #EFF2F9;
+            padding: .5rem;
+            margin-top: .5rem;
+            border-radius: 5px;
+            font-size: .8rem;
+            cursor: pointer;
+            border: 1px solid white;
+            &:hover{
+                border: 1px solid #cccccc;
+            }
+                img{
+                    margin: 0 .5rem;
+                }
+        }
+      }
       .errorText{
         color: red;
         font-size: .5rem;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import { RCStyles } from '../atoms/StyledLandingPage'
 import * as Yup from 'yup'
 import { useToast } from '@chakra-ui/react'
@@ -7,18 +8,21 @@ import { Card } from '../atoms/StyledLandingPage'
 import { useFormik } from 'formik'
 import { StyledButton } from '../atoms/StyledButtons'
 import { useOutletContext } from 'react-router-dom'
+import Loader from '../components/Loader'
 
 function ContactUs() {
     const showMenu = useOutletContext()
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
     const fullNameRegex = /^[a-z ,.'-]+$/i
-    const toast = useToast();
+    const successToast = useToast();
+   const failedToast = useToast();
+    const [isLoading, setisLoading] = useState(false)
     const formik = useFormik({
       initialValues: {
         fullname: '',
         email: '',
-        phone:'',
-        description:'',
+        phone_number:'',
+        title:'',
       },
       validationSchema: Yup.object({
         fullname: Yup.string()
@@ -29,28 +33,46 @@ function ContactUs() {
                 .email()
                 .label('Email')
                 .required(),
-        phone: Yup.string()
+        phone_number: Yup.string()
                 .matches(phoneRegExp, 'Phone number is not valid')
                 .label('Phone Number')
                 .required(),
-        description: Yup.string()
+        title: Yup.string()
                 .label('Your Message')
                 .required(),
       }),
       onSubmit: function  (values, {resetForm}) {
+        setisLoading(true)
         console.log(`You are registered! 
          Name: ${values.fullname}
          Email: ${values.email}
-         Phone: ${values.phone}
-         Description: ${values.description}
+         Phone: ${values.phone_number}
+         Title: ${values.title}
          `);
-         toast({
-            title: 'Message Submitted.',
-            description: "Your message has been delivered.",
+
+         axios.post(' https://prevet.herokuapp.com/api/v1/contact/call', values)
+        .then(function (response) {
+          console.log(response);
+          setisLoading(false)
+          successToast({
+            title: 'Request Submitted.',
+            description: "Your request will be processed.",
             status: 'success',
             duration: 9000,
             isClosable: true,
           })
+        })
+        .catch(function (error) {
+          console.log(error);
+          setisLoading(false)
+          failedToast({
+            title: 'Request Failed.',
+            description: "Please try again.",
+            status: 'error',
+            duration: 9000,
+            isClosable: true,
+          })
+        });
          resetForm();
       }
     })
@@ -94,39 +116,39 @@ function ContactUs() {
            )}
       </InputGroup>
       <InputGroup className="input-group">
-        <label htmlFor="phone">
+        <label htmlFor="phone_number">
           Phone Number
         </label>
         <input
-        className={formik.touched.phone && formik.errors.phone ? 'error' : ''}
-        onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.phone}
+        className={formik.touched.phone_number && formik.errors.phone_number ? 'error' : ''}
+        onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.phone_number}
          type="tel" 
-         name="phone"
-         id="phone"
+         name="phone_number"
+         id="phone_number"
          placeholder="Enter your phone number"
          />
-         {formik.touched.phone && formik.errors.phone && (
-           <span className='errorText'>{formik.errors.phone}</span>
+         {formik.touched.phone_number && formik.errors.phone_number && (
+           <span className='errorText'>{formik.errors.phone_number}</span>
            )}
       </InputGroup>
       </div>
       <InputGroup className="input-group">
-        <label htmlFor="description">
+        <label htmlFor="title">
           Your Message
         </label>
         <textarea
-        className={formik.touched.description && formik.errors.description ? 'error' : ''}
-        onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.description}
-         name="description"
-         id="description"
+        className={formik.touched.title && formik.errors.title ? 'error' : ''}
+        onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.title}
+         name="title"
+         id="title"
          placeholder="Enter your message here..."
          cols={5} rows={5}
          />
-         {formik.touched.description && formik.errors.description && (
-           <span className='errorText'>{formik.errors.description}</span>
+         {formik.touched.title && formik.errors.title && (
+           <span className='errorText'>{formik.errors.title}</span>
            )}
       </InputGroup>
-     
+      {isLoading && <Loader />}
       <div className="btn-group">
       <StyledButton type='submit'> 
         Submit

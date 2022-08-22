@@ -38,7 +38,7 @@ function LandingPage() {
     setTimeout(()=> {
       setOverlay(<OverlayOne />)
       onOpen()
-    }, 3000)
+    }, 10000)
   }, [])
   
   const openMenu = () => {
