@@ -43,12 +43,6 @@ function ContactUs() {
       }),
       onSubmit: function  (values, {resetForm}) {
         setisLoading(true)
-        console.log(`You are registered! 
-         Name: ${values.fullname}
-         Email: ${values.email}
-         Phone: ${values.phone_number}
-         Title: ${values.title}
-         `);
 
          axios.post(' https://prevet.herokuapp.com/api/v1/contact/call', values)
         .then(function (response) {
