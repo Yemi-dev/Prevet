@@ -29,7 +29,6 @@ function PostRequest() {
       return;
     }
     setFile(file);
-    // console.log(file)
     formik.setFieldValue('image', file);
   }
   useEffect(() => {
