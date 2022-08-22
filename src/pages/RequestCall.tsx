@@ -46,13 +46,6 @@ function RequestCall() {
                 .required(),
       }),
       onSubmit: function  (values, {resetForm}) {
-        console.log(`You are registered! 
-         Name: ${values.fullname}
-         Email: ${values.email}
-         Phone: ${values.phone}
-         RequestTitle: ${values.requestTitle}
-         Description: ${values.description}
-         `);
          toast({
             title: 'Request Submitted.',
             description: "Your request will be processed.",
