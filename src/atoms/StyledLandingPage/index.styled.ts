@@ -111,12 +111,12 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
                     width: 100%;
                     text-align: center;
                     .hero-left{
-                        font-size: 2rem;
+                        font-size: 2.2rem;
                         font-weight: 500;
                     }
                     p{
                         width: 60%;
-                        font-size: .7rem;
+                        font-size: .8rem;
                         margin: 1rem auto;
                     }
                     .hl-links{
@@ -578,7 +578,7 @@ export const FAQCard = styled.div`
         }
 
         @media (max-width: 420px){
-            font-size: .7rem;
+            font-size: .5rem;
             white-space: nowrap;
         }
  `
