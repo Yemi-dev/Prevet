@@ -578,8 +578,14 @@ export const FAQCard = styled.div`
         }
 
         @media (max-width: 420px){
-            font-size: .5rem;
+            flex-direction: column;
+            align-items: center;
+            font-size: .7rem;
             white-space: nowrap;
+            a{
+                margin-top: .5rem;
+                margin-left: 0;
+            }
         }
  `
 
