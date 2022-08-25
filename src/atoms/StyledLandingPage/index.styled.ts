@@ -116,7 +116,7 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
                     text-align: center;
                     .hero-left{
                         font-size: 2.2rem;
-                        font-weight: 500;
+                        font-weight: 600;
                     }
                     p{
                         width: 100%;
@@ -125,6 +125,12 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
                     }
                     .hl-links{
                         justify-content: center;
+                        div{
+                            a{
+                                font-size: .8rem;
+                                padding: .5rem 2rem
+                            }
+                        }
                     }
             }
         } 
@@ -186,7 +192,8 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
             margin: -150px auto 0;
         }
     }
-    @media (max-width: 420px){
+    @media (max-width: 520px){
+        padding: 2rem 1rem;
         .hc-section{
            grid-template-columns: auto;
            width: 80%;
@@ -270,9 +277,10 @@ export const HeroSummaryStyles = styled.div`
                     font-size: 1.2rem
                 }
                 p{
+                    text-align: justify;
                     font-size: .9rem;
                     color: #555555;
-                    width: 70%;
+                    width: 100%;
                 }
             }
            
@@ -318,10 +326,11 @@ export const HeroSummaryStyles = styled.div`
             }
         }
     }
-    @media (max-width: 500px){
+    @media (max-width: 520px){
         padding: 4rem 0rem;
         h2{
             font-size: 1.5rem;
+            font-weight: bolder;
         }
         .summary-group{
             grid-template-columns: auto;
@@ -414,10 +423,10 @@ export const HeroSummaryStyles = styled.div`
                 margin-bottom: 1rem;
             }
             p{
-                font-size: .7rem;
+                font-size: .8rem;
                 margin-bottom: 1.5rem;
                 margin: 1rem auto 1.5rem;
-                width: 70%;
+                width: 90%;
             }
             div{
                 a{
@@ -480,19 +489,20 @@ export const EarnSubSection = styled.div`
             }
             .earn-highlights{
                 p{
-                    font-size: .7rem;
+                    font-size: .8rem;
                 }
             }
             div{
                 margin-top: 1.5rem;
                 a{
                     padding: .5rem 1.5rem;
-                    font-size: .7rem;
+                    font-size: .8rem;
                 }
             }
         }
     }
     @media (max-width: 600px){
+        padding: 5rem 2rem;
         flex-direction: column-reverse;
         .earn-banner{
             width: 100%;
@@ -507,14 +517,14 @@ export const EarnSubSection = styled.div`
             }
             .earn-highlights{
                 p{
-                    font-size: .7rem;
+                    font-size: .8rem;
                 }
             }
             div{
                 margin-top: 1.5rem;
                 a{
                     padding: .5rem 1.5rem;
-                    font-size: .7rem;
+                    font-size: .8rem;
                 }
             }
         }
@@ -527,14 +537,14 @@ export const EarnSubSection = styled.div`
             }
             .earn-highlights{
                 p{
-                    font-size: .7rem;
+                    font-size: .8rem;
                 }
             }
             div{
                 margin-top: 1.5rem;
                 a{
-                    padding: .5rem 1rem;
-                    font-size: .7rem;
+                    padding: .5rem 1.5rem;
+                    font-size: .8rem;
                 }
             }
         }
@@ -556,14 +566,13 @@ export const FAQSection = styled.div`
             font-size: 2rem;
         }
     }
-    @media (max-width: 420px){
+    @media (max-width: 520px){
+        padding: 7rem 2rem;
         .faq-title{
             font-size: 1.5rem;
         }
     }
-    @media (max-width: 420px){
-        padding: 7rem 2rem;
-    }
+
 `
 
 export const FAQCard = styled.div`
@@ -597,10 +606,10 @@ export const FAQCard = styled.div`
             }
         }
 
-        @media (max-width: 420px){
+        @media (max-width: 520px){
             flex-direction: column;
             align-items: center;
-            font-size: .7rem;
+            font-size: .8rem;
             white-space: nowrap;
             a{
                 margin-top: .5rem;
@@ -615,7 +624,7 @@ export const FAQCard = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 1rem auto;
+        margin: 1.5rem auto;
         .question{
             color: #222222;
             width: 75%;
@@ -640,7 +649,7 @@ export const FAQCard = styled.div`
             }
         }
         .response{
-            font-size: .6rem;
+            font-size: .7rem;
         }
     }
 `
@@ -689,7 +698,7 @@ export const InfoSection = styled.div`
             font-size: 1rem;
         }
         p{
-            font-size: .7rem;
+            font-size: .8rem;
             width: 90%;
         }
         .socials-icons{
@@ -1044,7 +1053,7 @@ export const CallSection = styled.div`
      }
      .call-card{
         padding: 2rem 0;
-        width: 70%;
+        width: 80%;
         background-color: white;
         border: none;
         .contact-group, .contact-sub-group{
@@ -1053,7 +1062,7 @@ export const CallSection = styled.div`
         }
         .contact-group{
             width: 60%;
-            margin: 2rem auto;
+            margin: 3rem auto;
             justify-content: space-between;
             .contact-sub-group{
                 justify-content: start;
@@ -1064,7 +1073,7 @@ export const CallSection = styled.div`
         }
         
         img{
-            width: 50px;
+            width: 70px;
             margin-right: 1rem;
         }
      }
@@ -1087,7 +1096,7 @@ export const CallSection = styled.div`
         .call-card{
             width: 100%;
             img{
-                width: 30px;
+                width: 50px;
             }
         }
         div{

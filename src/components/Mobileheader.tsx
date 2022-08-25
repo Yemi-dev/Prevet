@@ -6,12 +6,11 @@ import close from "../assets/SVG/close.svg"
 import { StyledButtonLinks } from '../atoms/StyledButtons'
 
 const MHStyles = styled.div`
-  display: none;
   position: absolute;
   transform: translateX(1000px);
-  transition: all 500ms ease-in-out;
+  transition: all 500ms ease;
   &.open{
-    transform:translateX(0px);
+    transform: translateX(0px);
     background-color: #FDE5E9;
     height: 100vh;
     width: 75vw;
@@ -21,7 +20,6 @@ const MHStyles = styled.div`
     top: 0;
     right: 0;
     padding: 2rem;
-
     .logo-group{
       width: 100%;
       display: flex;
@@ -69,9 +67,6 @@ const MHStyles = styled.div`
     display: none;
   }
  
-
-  
-
   @media (max-width: 768px){
     display: flex;
   }

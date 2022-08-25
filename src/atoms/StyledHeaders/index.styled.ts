@@ -111,8 +111,8 @@ export const StyledHeader = styled.div`
       }
     }
   }
-  @media (max-width:420px){
-    padding: 1.5rem 2rem;
+  @media (max-width:520px){
+    padding: 1.5rem 1rem;
     }
   }
 
