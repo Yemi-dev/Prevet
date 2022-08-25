@@ -1,21 +1,24 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { QuicklinksStyles } from '../atoms/StyledFooter'
 
 
 
 function Quicklinks() {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
   return (
    <QuicklinksStyles>
         <h5>Quick links</h5>
         <div className="border-highlight"></div>
         <div className="footer-links">
-            <Link to='/'>Home</Link>
-            {/* <Link to='/Request'>Requests</Link> */}
-            {/* <Link to='/Call'>Call Us</Link>
-            <Link to='/'>Notifications</Link> */}
-            <Link to='/Faq'>FAQ</Link>
-            <Link to='/'>Privacy Policy</Link>
-            {/* <Link to='/'>Terms & Conditions</Link> */}
+            <NavLink onClick={scrollToTop} to='/'>Home</NavLink>
+            {/* <NavLink onClick={scrollToTop} to='/Request'>Requests</NavLink> */}
+            {/* <NavLink onClick={scrollToTop} to='/Call'>Call Us</NavLink>
+            <NavLink onClick={scrollToTop} to='/'>Notifications</NavLink> */}
+            <NavLink onClick={scrollToTop} to='/Faq'>FAQs</NavLink>
+            <NavLink onClick={scrollToTop} to='/'>Privacy Policy</NavLink>
+            {/* <NavLink onClick={scrollToTop} to='/'>Terms & Conditions</NavLink> */}
         </div>
    </QuicklinksStyles>
   )

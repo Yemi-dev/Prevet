@@ -10,7 +10,7 @@ export const FooterSection = styled.div`
   &.open{
     opacity: 0.3;
 }
-  @media (max-width: 420px){
+  @media (max-width: 520px){
     padding:6rem 2rem;
   }
 `

@@ -24,7 +24,7 @@ function CallUs() {
                 </a>
             </div>
             <StyledButtonLinks>
-                <Link className='contact-link' to='/Contact-us'>Contact us</Link>
+                <Link className='contact-link' to='/Contact-us'>Become an Agent</Link>
             </StyledButtonLinks>
         </Card>
     </CallSection>
