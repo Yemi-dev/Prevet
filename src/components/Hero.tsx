@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { StyledButtonLinks } from '../atoms/StyledButtons'
 import HeroCard from './HeroCard'
-import { HeroSection, HeroBannerBackground } from '../atoms/StyledLandingPage'
+import { HeroSection } from '../atoms/StyledLandingPage'
 
 
 
@@ -12,21 +12,22 @@ function Hero(props: any) {
         <div className='before'>
         <div className='hl-group'>
             <div className='hl-sub-group'>
-            <h1 className='hero-left'>Quality Vetting</h1>
-            <p>Need a professional to check the engine record of any car for 5,000?</p>
+            <h1 className='hero-left'>Pre Purchase Car Inspection</h1>
+            <p>Need a professional to check the engine record of any car for 5,000? <br />
+               Get your pre-purchase car inspection today with Prevet. We're here to prevent you from buying substandards.</p>
             <div className='hl-links'>
             <StyledButtonLinks>
-              <Link to="/Post">Post a Request</Link>
+              <Link to="/Post">Order Inspection</Link>
             </StyledButtonLinks>
-            <StyledButtonLinks variant='primary'>
+            {/* <StyledButtonLinks variant='primary'>
               <Link to="/Request"> Request a call</Link>
-            </StyledButtonLinks>
+            </StyledButtonLinks> */}
             </div>
             </div>
         </div>
-        <HeroBannerBackground>
+        {/* <HeroBannerBackground>
             <div className='hb'></div>
-        </HeroBannerBackground>
+        </HeroBannerBackground> */}
         </div>
         <HeroCard/>
     </HeroSection>

@@ -106,7 +106,7 @@ width: 30%;
                 }
             }
             button{
-                font-size: .6rem;
+                font-size: .7rem;
             }
         }
         
@@ -149,7 +149,7 @@ margin-bottom: 3rem;
         width: 100%;
         .footer-links{
             a{
-                font-size: .6rem;
+                font-size: .7rem;
             }
         }
     }
@@ -185,7 +185,7 @@ export const AboutStyles = styled.div`
         width: 100%;
         .about-texts{
             width: 100%;
-            font-size: .6rem;
+            font-size: .7rem;
         }
     }
 `

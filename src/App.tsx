@@ -15,6 +15,7 @@ import ContactUs from './pages/ContactUs'
 import Faqs from './pages/Faqs'
 import LandingPage from './pages/LandingPage'
 import RequestCall from './pages/RequestCall'
+import NotFound from './pages/404'
 
 function App() {
   const { pageTitle } = useApp();
@@ -65,6 +66,9 @@ function App() {
             path='/Faq'
             element={<Faqs />}></Route>
           </Route>
+            <Route
+            path='/*'
+            element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

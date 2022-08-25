@@ -13,7 +13,7 @@ import Loader from '../components/Loader'
 
 function RequestCall() {
     const showMenu = useOutletContext()
-    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+    const phoneRegExp = /^[/+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,8}$/
     const fullNameRegex = /^[a-z ,.'-]+$/i
     const toast = useToast();
     const [isLoading, setisLoading] = useState(false)
@@ -137,7 +137,7 @@ function RequestCall() {
             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.description}
              name="description"
              id="description"
-             placeholder="Enter a title for your request..."
+             placeholder="Add more information..."
              cols={5} rows={5}
              />
              {formik.touched.description && formik.errors.description && (

@@ -11,7 +11,7 @@ import { HeroCardSection, Card } from '../atoms/StyledLandingPage'
 function HeroCard() {
   return (
    <HeroCardSection>
-    <div className='hc-section'>
+    {/* <div className='hc-section'>
         <Card>
             <img src={postRq} alt="postCall" />
             <h4>Posting a Request</h4>
@@ -51,7 +51,7 @@ function HeroCard() {
             </StyledButtonLinks>
             </div>
         </Card>
-        </div>
+        </div> */}
         <HeroSummary />
    </HeroCardSection>
   )

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, Suspense} from 'react'
 import { Outlet } from 'react-router-dom'
 import { useDisclosure, ModalOverlay } from '@chakra-ui/react'
 import styled from 'styled-components'
@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import Info from '../components/Info'
 import Mobileheader from '../components/Mobileheader'
 import LandingModal from '../components/LandingModal'
+import LazyLoader from '../components/LazyLoader'
 
 
  export const Container = styled.div`
@@ -28,7 +29,6 @@ const OverlayOne = () => (
 function LandingPage() {
 
   const [showMenu, setShowMenu] = useState<boolean>(false)
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = useState(<OverlayOne />)
  
@@ -38,7 +38,7 @@ function LandingPage() {
     setTimeout(()=> {
       setOverlay(<OverlayOne />)
       onOpen()
-    }, 10000)
+    }, 30000)
   }, [])
   
   const openMenu = () => {
@@ -48,14 +48,17 @@ function LandingPage() {
     setShowMenu(false)
   }
   return (
-    <Container >
+    <Suspense fallback={<LazyLoader />}>
+   <Container >
     <LandingModal onClick={onClose} isOpen={isOpen} overlay={overlay}/>
        <Mobileheader  showMenu={showMenu} onClick={closeMenu} />
        <Header onClick={openMenu} className={showMenu ? 'open' : ''}/>
        <Outlet context={showMenu}/>
-       <Info className={showMenu ? 'open' : ''} />
+       {/* <Info className={showMenu ? 'open' : ''} /> */}
        <Footer className={showMenu ? 'open' : ''}/>
    </Container>
+    </Suspense>
+   
   
   )
 }

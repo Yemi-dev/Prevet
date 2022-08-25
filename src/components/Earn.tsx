@@ -15,7 +15,7 @@ function Earn(props: any) {
             <br />
             Become our Agent and decide how much you want to earn.</p>
             <StyledButtonLinks>
-                <Link to="/Request"> Become an Agent</Link>
+                <Link to="/Contact-us"> Become an Agent</Link>
             </StyledButtonLinks>
         </div>
     </EarnSection>

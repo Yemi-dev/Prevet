@@ -15,7 +15,8 @@ const imageMimeType = /image\/(png|jpg|jpeg)/i;
 
 function PostRequest() {
    const showMenu = useOutletContext()
-  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+  const phoneRegExp = /^[/+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,8}$/
+  
   const fullNameRegex = /^[a-z ,.'-]+$/i
   const successToast = useToast();
   const failedToast = useToast();
@@ -155,7 +156,7 @@ function PostRequest() {
   return (
     <PRStyles className={showMenu ? 'open' : ''}>
       <Card className='PR-card'>
-        <h2>Post a request</h2>
+        <h2>Order Inspection</h2>
         <form encType='multipart/form-data' onSubmit={formik.handleSubmit}>
           <InputGroup className="input-group">
             <label htmlFor="fullname">
@@ -232,7 +233,7 @@ function PostRequest() {
             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.description}
              name="description"
              id="description"
-             placeholder="Enter a title for your request..."
+             placeholder="Enter a detailed description of your request..."
              cols={5} rows={5}
              />
              {formik.touched.description && formik.errors.description && (
@@ -273,7 +274,7 @@ function PostRequest() {
                )}
           </InputGroup>
           </div>
-          <h3>Car Location</h3>
+          <h3 style={{fontSize: '1.5rem', fontWeight: 'bold', margin: '2rem 0 0'}}>Car Location</h3>
           <div className="mini-input-group">
           <InputGroup className="input-group">
             <label htmlFor="car_phone_number">
@@ -285,7 +286,7 @@ function PostRequest() {
              type="tel" 
              name="car_phone_number"
              id="car_phone_number"
-             placeholder="Enter your phone number"
+             placeholder="Enter phone number"
              />
              {formik.touched.car_phone_number && formik.errors.car_phone_number && (
                <span className='errorText'>{formik.errors.car_phone_number}</span>
