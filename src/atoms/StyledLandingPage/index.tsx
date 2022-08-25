@@ -1,6 +1,6 @@
 export { 
        HeroSection,
-       HeroBannerBackground,
+      //  HeroBannerBackground,
        Card,
        HeroCardSection,
        HeroSummaryStyles,

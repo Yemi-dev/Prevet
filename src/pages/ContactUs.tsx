@@ -12,7 +12,7 @@ import Loader from '../components/Loader'
 
 function ContactUs() {
     const showMenu = useOutletContext()
-    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+    const phoneRegExp = /^[/+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,8}$/
     const fullNameRegex = /^[a-z ,.'-]+$/i
     const successToast = useToast();
    const failedToast = useToast();
@@ -74,7 +74,7 @@ function ContactUs() {
   return (
     <RCStyles className={showMenu ? 'open' : ''}>
     <Card className='PR-card'>
-    <h2>Contact Us</h2>
+    <h2>Become an Agent</h2>
     <form onSubmit={formik.handleSubmit}>
       <InputGroup className="input-group">
         <label htmlFor="fullname">

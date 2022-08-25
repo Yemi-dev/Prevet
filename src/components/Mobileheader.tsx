@@ -92,10 +92,10 @@ function Mobileheader(props: any) {
           <NavLink to="/Request" onClick={props.onClick}> Request Call </NavLink>
           <NavLink to="/Call" onClick={props.onClick}> Call Us</NavLink>
           <NavLink to="/Faq" onClick={props.onClick}>FAQs</NavLink>
-          <NavLink to="/Contact-us" onClick={props.onClick}>Contact Us</NavLink>
+          {/* <NavLink to="/Contact-us" onClick={props.onClick}>Contact Us</NavLink> */}
         </div>
         <StyledButtonLinks>
-          <Link to="/Post" onClick={props.onClick}>Post a Request</Link>
+          <Link to="/Post" onClick={props.onClick}>Order Inspection</Link>
         </StyledButtonLinks>
       </div>
   </MHStyles>

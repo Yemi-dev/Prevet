@@ -15,14 +15,16 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
         justify-content: space-between;
         width: 100%;
         .hl-group{
-            width: 50%;
-            height: 500px;
+            width: 70%;
+            margin: 1rem auto;
+            height: 650px;
             padding: 2rem;
             display: flex;
-            justify-content: end;
+            justify-content: center;
             align-items: center;
             .hl-sub-group{
-                width: 90%;
+                width: 100%;
+                text-align: center;
                 .hero-left{
                     font-size: 3.7rem;
                     font-weight: 600;
@@ -33,11 +35,13 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
                     color: white;
                     font-size: 1.1rem;
                     margin: 1rem 0;
-                    font-weight: 300
+                    font-weight: 500;
                 }
                 .hl-links{
-                    margin: 2rem auto;
+                    margin: 3rem auto;
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
                     div{
                         a{
                             margin: 0 1rem 0 0
@@ -115,7 +119,7 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
                         font-weight: 500;
                     }
                     p{
-                        width: 60%;
+                        width: 100%;
                         font-size: .8rem;
                         margin: 1rem auto;
                     }
@@ -129,34 +133,34 @@ import EarnBanner2 from "../../assets/earnBanner2.png"
 
 `
 
- export const HeroBannerBackground = styled.div`
-    width: 50%;
-    height: 750px;
-    &.open {
-        opacity: 0.3;
-     }
-    .hb{
-        margin-top: -50px;
-        background-position: right;
-        background-image: url(${HeroBannerImg});
-        width: 100%;
-        height: 800px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+//  export const HeroBannerBackground = styled.div`
+//     width: 50%;
+//     height: 750px;
+//     &.open {
+//         opacity: 0.3;
+//      }
+//     .hb{
+//         margin-top: -50px;
+//         background-position: right;
+//         background-image: url(${HeroBannerImg});
+//         width: 100%;
+//         height: 800px;
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//     }
 
-    @media (max-width: 768px){
-        height: 700px;
-        .hb{
-            margin-top: -150px;
-        }
-    }
+//     @media (max-width: 768px){
+//         height: 700px;
+//         .hb{
+//             margin-top: -150px;
+//         }
+//     }
 
-    @media (max-width: 650px){
-      display: none
-    }
+//     @media (max-width: 650px){
+//       display: none
+//     }
     
-`
+// `
  export const HeroCardSection = styled.div`
     width: 100%;
     padding: 2rem;
@@ -255,16 +259,23 @@ export const HeroSummaryStyles = styled.div`
         margin: 3rem auto;
         .summary-sub-group{
             display: flex;
-            align-items: center;
+            align-items: start;
             img{
                 width: 80px;
                 margin-right: 2rem;
             }
-            p{
-                font-size: 1rem;
-                color: #555555;
-                width: 70%;
+            .summary-highlights{
+                h3{
+                    font-weight: 600;
+                    font-size: 1.2rem
+                }
+                p{
+                    font-size: .9rem;
+                    color: #555555;
+                    width: 70%;
+                }
             }
+           
         }
     }
     @media (max-width: 990px){
@@ -278,8 +289,11 @@ export const HeroSummaryStyles = styled.div`
                     width: 80px;
                     margin-right: 1rem;
                 }
-                p{
-                    font-size: .7rem;
+                .summary-highlights{
+                    p{
+                        font-size: .8rem;
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -296,9 +310,10 @@ export const HeroSummaryStyles = styled.div`
                     width: 50px;
                     margin-right: 1rem;
                 }
-                p{
-                    font-size: .7rem;
-                    width: 100%;
+                .summary-highlights{
+                    p{
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -315,9 +330,14 @@ export const HeroSummaryStyles = styled.div`
                     width: 40px;
                     margin-right: 1rem;
                 }
-                p{
-                    font-size: .6rem;
-                    width: 100%;
+                .summary-highlights{
+                    h3{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: .8rem;
+                        width: 90%;
+                    }
                 }
             }
         }
@@ -626,38 +646,51 @@ export const FAQCard = styled.div`
 `
 
 export const InfoSection = styled.div`
-    background-color: #FAFAFA;
+    // background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 7rem 4rem;
-    &.open {
-        opacity: 0.3;
-     }
+    // align-items: center;
+    // justify-content: center;
+    // padding: 7rem 4rem;
+    // &.open {
+    //     opacity: 0.3;
+    //  }
     h2{
-        font-size: 2.5rem;
+        font-size: 1rem;
         font-weight: 600;
+        color: white;
+    }
+    .border-highlight{
+        width: 25px;
+        height: 2px;
+        background-color: #EF4325;
+        margin-bottom: 2rem;
     }
     p{
-        color: #555555;
-        width: 30%;
-        text-align: center;
-        margin: 1.5rem auto;
+        color: #CCCCCC;
+        width: 90%;
+        font-size: .8rem;
     }
     .socials-icons{
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        grid-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 2px;
+        margin-top: 1rem;
+        width: 60%;
+        a{
+            img{
+                width: 30px;
+            }
+        }
     }
     @media (max-width: 600px){
-        padding: 7rem 2rem; 
+        // padding: 7rem 2rem; 
         h2{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         p{
             font-size: .7rem;
-            width: 60%;
+            width: 90%;
         }
         .socials-icons{
             a{

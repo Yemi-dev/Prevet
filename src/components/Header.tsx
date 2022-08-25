@@ -9,19 +9,19 @@ function Header(props: any) {
 
   return (
       <StyledHeader className={props.className}>
-        <div className='logo-group'>
+        <Link to='/' className='logo-group'>
           <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <div className='header-links'>
         <StyledButtonLinks>
-          <Link to="/Post">Post a Request</Link>
+          <Link to="/Post">Order Inspection</Link>
         </StyledButtonLinks>
         <div className='navigation-group'>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/Request"> Request Call </NavLink>
           <NavLink to="/Call"> Call Us</NavLink>
           <NavLink to="/Faq">FAQs</NavLink>
-          <NavLink to="/Contact-us">Contact Us</NavLink>
+          {/* <NavLink to="/Contact-us">Contact Us</NavLink> */}
         </div>
         </div>
         <div className="menu-group">
